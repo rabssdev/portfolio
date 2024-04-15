@@ -1,22 +1,21 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layouts";
-import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import Dance from "./Dance";
+import { OrbitControls } from "@react-three/drei";
 
-export default function App() {
+
+
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    
+
+    <Canvas>
+      <OrbitControls />
+      <directionalLight intensity={1} />
+      <ambientLight intensity={0.2} /> 
+      <Dance />
+    </Canvas>
   );
 }
+
+export default App;
