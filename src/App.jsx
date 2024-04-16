@@ -21,7 +21,7 @@ function App() {
         <h1 className="text-4xl font-bold text-white">
           RASOLOFOMANANA RABSS
         </h1>
-        <h2 className="text-red">Hello everyone</h2>
+        <h2 className="text-red">Hello Tahina</h2>
         <h2 className="">PORTFOLIO DEV</h2>
         <div>
           {/* Render the Spline cube with animated transform */}
