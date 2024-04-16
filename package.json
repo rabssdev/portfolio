@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.105.4",
     "@react-three/fiber": "^8.16.1",
     "@splinetool/react-spline": "^2.2.6",
+    "@vercel/speed-insights": "^1.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-iframe": "^1.8.5",
