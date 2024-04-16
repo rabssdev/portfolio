@@ -24,8 +24,9 @@ export default defineConfig({
   },
   plugins: [react()],
   build: {
-    outDir: 'build'
-  }
+    // ... other build options
+    assetDir: 'assets', // Set the asset directory within the output folder
+  },
 });
 
 

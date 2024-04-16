@@ -19,8 +19,9 @@ function App() {
     <div className="relative">
       <div className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full bg-cover">
         <h1 className="text-4xl font-bold text-white">
-          RASOLOFOMANANA RABE ANDRIANINA
+          RASOLOFOMANANA RABSS
         </h1>
+        <h2 className="text-red">Hello everyone</h2>
         <h2 className="">PORTFOLIO DEV</h2>
         <div>
           {/* Render the Spline cube with animated transform */}
