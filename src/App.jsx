@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="relative">
       <div className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full bg-cover">
-        <h1 className="text-4xl font-bold text-white">
-          RASOLOFOMANANA RABSS
+        <h1 className="text-6xl font-bold text-black">
+          RABSSDEV
         </h1>
         
         <h2 className="">PORTFOLIO DEV</h2>
