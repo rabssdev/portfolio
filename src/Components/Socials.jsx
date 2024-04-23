@@ -4,23 +4,22 @@ import GmailIcon from "../assets/gmail.svg";
 import LinkedInIcon from "../assets/linkedin.svg";
 import WhatsAppIcon from "../assets/whatsapp.svg";
 import GitHubIcon from "../assets/github.svg";
-
-//   return (
-//     <div className="flex flex-row gap-4">
-//       {socialLinks.map((socialLink) => (
-//         <a key={socialLink.href} href={socialLink.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-//           {socialLink.icon}
-//         </a>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Socials;
+import { motion } from "framer-motion";
 
 import React from "react";
 
 export default function Socials() {
+  const variants = {
+    hover: {
+      rotate: [0, 360],
+      transition: {
+        duration: 0.2,
+        ease: "linear",
+        loop: Infinity,
+      },
+    },
+  };
+
   const socialLinks = [
     {
       icon: FacebookIcon,
@@ -31,7 +30,7 @@ export default function Socials() {
       href: "https://discord.com/widget?id=1229366295175237663&theme=dark", // Replace with your actual link
     },
     {
-      icon: GmailIcon ,
+      icon: GmailIcon,
       href: "mailto:rabssdev@gmail.com", // Replace with your actual link
     },
     {
@@ -39,7 +38,7 @@ export default function Socials() {
       href: "https://www.linkedin.com/in/rabssdev", // Replace with your actual link
     },
     {
-      icon: WhatsAppIcon ,
+      icon: WhatsAppIcon,
       href: "https://wa.me/261345621854?text=Bonjour", // Replace with your actual link
     },
     {
@@ -50,7 +49,6 @@ export default function Socials() {
   return (
     <div className="flex flex-row gap-4">
       {socialLinks.map((socialLink) => (
-        
         <a
           key={socialLink.href}
           href={socialLink.href}
@@ -58,7 +56,13 @@ export default function Socials() {
           rel="noopener noreferrer"
           className="inline-flex items-center"
         >
-          <img src={socialLink.icon} alt="img" srcset="" />
+          <motion.img
+            src={socialLink.icon}
+            alt="img"
+            srcSet=""
+            variants={variants}
+            whileHover="hover"
+          />
         </a>
       ))}
     </div>

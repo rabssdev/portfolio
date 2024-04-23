@@ -1,40 +1,64 @@
 import React, { useState } from "react";
 import Socials from "./Components/Socials";
-import DiscordFrame from "./pages/DiscordFrame";
-import Spline from "@splinetool/react-spline";
-import { useSpring } from "react-spring";
+import { Canvas } from "@react-three/fiber";
+import { Mesh } from "three";
+import RightMenu from "./Components/RightMenu";
+import ProfileCircle from "./Components/ProfileCircle";
+
+function Box() {
+  return (
+    <mesh>
+      <boxBufferGeometry attach="geometry" />
+      <meshLambertMaterial attach="material" color="hotpink" />
+    </mesh>
+  );
+}
 
 function App() {
-  const [rotation, setRotation] = useState({ x: 0, y: 0, z: 0 });
-
-  // Initialize animation using React Spring
-  const spring = useSpring({
-    from: { x: 0, y: 0, z: 0 }, // Initial rotation values
-    to: async (next) => {
-      return { x: next.x + 0.01, y: next.y, z: next.z };
-    },
-    config: { duration: 1000 }, // Adjust animation duration as needed
-  });
   return (
     <div className="relative">
-      <div className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full bg-cover">
-        <h1 className="text-6xl font-bold text-black">
-          RABSSDEV
-        </h1>
-        
-        <h2 className="">PORTFOLIO DEV</h2>
-        <div>
-          {/* Render the Spline cube with animated transform */}
-          <Spline scene="https://prod.spline.design/AsrnQFtWy1eMLAZN/scene.splinecode" />
+      <div className="flex flex-col justify-center items-center absolute top-[0px] left-0 w-full h-full bg-cover">
+        {/* <ProfileCircle /> */}
+        <Socials />
+        <div className="relative flex justify-center items-center">
+          <h1 className="font-bold text-[30px] text-[#F23838] mr-10">RABSS</h1>
           
+          <h1 className="ml-10 font-bold text-[30px] text-[#4ACAD9]">DEV</h1>
         </div>
 
-        <Socials />
-       
+        <div className="bg-white rounded-lg shadow-xl m-5">
+          <h1 className="m-5 text-xl font-bold justify-center items-center font-mono">
+            Formations
+          </h1>
+          <div className="bg-[#4ACAD9] m-5">
+            <h2 className="font-bold m-2 text-lg text-white">
+               Licence dans la mention électronique parcours signaux et
+              systèmes
+            </h2>
+            <p className="m-5">A l'Ecole supérieure polytechnique d’Antananarivo (ESPA) 2023</p>
+          </div>
+          <div className= "bg-[#4ACAD9] m-8">
+            <h2 className="font-bold m-2 text-lg text-white">
+               Formations à l'Orange Digital Center de Madagascar
+            </h2>
+            <div className="m-5">
+            <p>- FORMATION EN CYBERSECURITE DEBUTANT SUR CISCO</p>
+            <p>- FORMATION A L’INITIATION AU LINUX</p>
+            <p>- FORMATION UXUI DESIGN SUR FIGMA</p>
+            <p>- FORMATION A LA CREATION DE CONTENUS</p>
+            </div>
+            
+          </div>
+        </div>
       </div>
+      
+
       <div className="flex flex-row min-h-screen">
+        {/* LEFT COLUMN */}
         <div className="w-1/2 bg-[#4ACAD9]"></div>
-        <div className="w-1/2 bg-[#F23838]"></div>
+
+        {/* RIGHT COLUMN */}
+        <div className="w-1/2 bg-[#F23838] h-[100]"></div>
       </div>
     </div>
   );
