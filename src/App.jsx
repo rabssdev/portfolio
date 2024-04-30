@@ -19,7 +19,7 @@ function App() {
     <div className="relative">
       <div className="flex flex-col justify-center items-center absolute top-[0px] left-0 w-full h-full bg-cover">
         {/* <ProfileCircle /> */}
-        <Socials />
+        
         <div className="relative flex justify-center items-center">
           <h1 className="font-bold text-[30px] text-[#F23838] mr-10">RABSS</h1>
           
@@ -47,11 +47,11 @@ function App() {
             <p>- FORMATION UXUI DESIGN SUR FIGMA</p>
             <p>- FORMATION A LA CREATION DE CONTENUS</p>
             </div>
-            
           </div>
+          
         </div>
+        <Socials />
       </div>
-      
 
       <div className="flex flex-row min-h-screen">
         {/* LEFT COLUMN */}
