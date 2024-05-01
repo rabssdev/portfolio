@@ -19,37 +19,28 @@ function App() {
     <div className="relative">
       <div className="flex flex-col justify-center items-center absolute top-[0px] left-0 w-full h-full bg-cover">
         {/* <ProfileCircle /> */}
-        
+
         <div className="relative flex justify-center items-center">
           <h1 className="font-bold text-[30px] text-[#F23838] mr-10">RABSS</h1>
-          
+
           <h1 className="ml-10 font-bold text-[30px] text-[#4ACAD9]">DEV</h1>
         </div>
 
         <div className="bg-white rounded-lg shadow-xl m-5">
-          <h1 className="m-5 text-xl font-bold justify-center items-center font-mono">
+          <h1 className="m-5 text-base md:text-xl font-bold justify-center items-center font-mono">
             Formations
           </h1>
           <div className="bg-[#4ACAD9] m-5">
-            <h2 className="font-bold m-2 text-lg text-white">
-               Licence dans la mention électronique parcours signaux et
-              systèmes
+            <h2 className="font-bold m-2 text-base md:text-lg text-white">
+              Licence dans la mention électronique parcours signaux et systèmes
             </h2>
-            <p className="m-5">A l'Ecole supérieure polytechnique d’Antananarivo (ESPA) 2023</p>
-          </div>
-          <div className= "bg-[#4ACAD9] m-8">
-            <h2 className="font-bold m-2 text-lg text-white">
-               Formations à l'Orange Digital Center de Madagascar
-            </h2>
-            <div className="m-5">
-            <p>- FORMATION EN CYBERSECURITE DEBUTANT SUR CISCO</p>
-            <p>- FORMATION A L’INITIATION AU LINUX</p>
-            <p>- FORMATION UXUI DESIGN SUR FIGMA</p>
-            <p>- FORMATION A LA CREATION DE CONTENUS</p>
-            </div>
+            <p className="m-5 text-sm md:text-base">
+              A l'Ecole supérieure polytechnique d’Antananarivo (ESPA) 2023
+            </p>
           </div>
           
         </div>
+
         <Socials />
       </div>
 

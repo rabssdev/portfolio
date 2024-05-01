@@ -8,5 +8,8 @@ export default {
     extend: {},
   },
   plugins: [],
+  backgroundImage: {
+    'custom-bg': "url('/fond.png')",
+  }
 }
 
