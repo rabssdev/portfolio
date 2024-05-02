@@ -6,6 +6,7 @@ import WhatsAppIcon from "../assets/whatsapp.svg";
 import GitHubIcon from "../assets/github.svg";
 import { motion } from "framer-motion";
 
+
 import React from "react";
 
 export default function Socials() {
@@ -65,6 +66,7 @@ export default function Socials() {
           />
         </a>
       ))}
+      
     </div>
   );
 }

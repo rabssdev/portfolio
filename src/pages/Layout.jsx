@@ -1,12 +1,14 @@
 import { Outlet, Link } from "react-router-dom";
+import App from "../App";
+import Content from "./Content";
 
 const Layout = () => {
   return (
     <>
-      <nav>
+      <nav className="bg-green-300">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Homes</Link>
           </li>
           <li>
             <Link to="/blogs">Blogs</Link>
@@ -17,7 +19,7 @@ const Layout = () => {
         </ul>
       </nav>
 
-      <Outlet />
+      <Content />
     </>
   )
 };

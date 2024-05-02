@@ -4,22 +4,17 @@ import { Canvas } from "@react-three/fiber";
 import { Mesh } from "three";
 import RightMenu from "./Components/RightMenu";
 import ProfileCircle from "./Components/ProfileCircle";
+import Navbar from "./Components/Navbar";
+import Content from "./pages/Content";
 
-function Box() {
-  return (
-    <mesh>
-      <boxBufferGeometry attach="geometry" />
-      <meshLambertMaterial attach="material" color="hotpink" />
-    </mesh>
-  );
-}
 
 function App() {
   return (
     <div className="relative">
       <div className="flex flex-col justify-center items-center absolute top-[0px] left-0 w-full h-full bg-cover">
         {/* <ProfileCircle /> */}
-
+        <Navbar />
+        <Content/>
         <div className="relative flex justify-center items-center">
           <h1 className="font-bold text-[30px] text-[#F23838] mr-10">RABSS</h1>
 
@@ -38,9 +33,8 @@ function App() {
               A l'Ecole supérieure polytechnique d’Antananarivo (ESPA) 2023
             </p>
           </div>
-          
         </div>
-
+        
         <Socials />
       </div>
 
